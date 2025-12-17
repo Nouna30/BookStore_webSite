@@ -1,0 +1,494 @@
+.images{
+    max-width: 20px;
+    max-height: 20px;
+} 
+ 
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+.citation {
+    font-style: italic;
+    color: #444;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.auteur {
+    display: block;
+    font-size: 16px;
+    color: #7a6d6d;
+}
+
+
+.bx {
+    font-size: 30px;
+    cursor: pointer;
+    color: #7c7a7a;
+}
+
+/* Barre du haut */
+.up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px; /* Un peu plus d'espace à gauche et à droite */
+    background-color: #f5f5f5; /* Couleur de fond plus douce */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre plus douce et plus grande pour plus de profondeur */
+    border-radius: 8px; /* Coins arrondis pour un effet plus moderne */
+}
+
+/* Icône panier */
+.up i.bx-cart {
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease; /* Ajout d'un effet au survol */
+    margin-right: 20px;
+}
+
+/* Effet au survol de l'icône panier */
+.up i.bx-cart:hover {
+    transform: scale(1.1); /* L'icône grossit légèrement au survol */
+}
+
+/* Champ de recherche */
+.up input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 500px; /* Largeur fixe pour un meilleur alignement */
+    font-size: 16px;
+    color: #555;
+    transition: border-color 0.3s ease-in-out;
+    margin-right: 20px ;
+}
+
+.up select{
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: auto; /* Largeur fixe pour un meilleur alignement */
+    font-size: 16px;
+    color: #555;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Effet au survol du champ de recherche */
+.up input:focus  {
+    border-color: #b4a49b; /* Changer la couleur de bordure lors du focus */
+    box-shadow: 0 0 8px rgba(212, 144, 121, 0.3); /* Ombre légère pour l'effet focus */
+}
+
+.up span {
+    font-size: 17px;
+    color: #7c7a7a; /* Couleur discrète pour le texte */
+    margin-right: 10px; /* Espacement entre l'élément et l'icône panier */
+}
+
+
+/* Navigation */
+header{
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo{
+    max-width: 40px;
+    max-height: 40px;
+}
+
+main {
+    padding-top: 80px; /* légèrement + que le header pour éviter le chevauchement */
+  }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background-color: #b4a49b;
+    color: white;
+    position: relative;
+}
+
+nav h1 {
+    display: flex;
+    align-items: center;
+}
+
+nav h1 img {
+    width: 70px;
+    margin-right: 10px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+
+#user-icon {
+    font-size: 25px;
+    font-weight: 5PX;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+nav h1 span {
+    font-family: 20;
+}
+/* Menu */
+.nav {
+    background-color: #b4a49b;
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Icône menu burger */
+#menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 30px;
+    color: #fff;
+}
+
+/* Menu pour grand écran */
+.menu {
+    display: flex;
+    background-color: #b4a49b;
+    gap: 40px;
+
+}
+
+/* Menu responsive */
+@media screen and (max-width: 1000px) {
+    #menu-icon {
+        display: block;
+        margin-right: 60px ;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 49px;
+        right: 20px;
+        background-color: #b4a49b;
+        padding: 20px;
+        border-radius: 5px;
+        gap : 0;
+    }
+    .menu li {
+        padding-bottom: 15px ;
+        padding-top: 15px ;
+        padding-left: 40px ;
+        padding-right: 40px ;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .nav ul li:hover {
+        background-color: #bcb5b0;
+        border-radius: 5px;
+    }
+}
+
+.nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav ul li:hover {
+    text-decoration: underline;
+}
+
+
+/* Section 1 */
+div:not(.nav) {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+div img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+div h2 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+div p {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: #555;
+}
+
+div button {
+    background-color: #654f4f;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+div button:hover {
+    background-color: #a07e7e;
+}
+
+/* les produits */
+.product
+{
+    padding: 20px;
+    background-color: #eee;
+}
+.product h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.product-slider {
+    display: flex;
+    overflow-x: scroll; /*pour que tou ce qui est en dehors de la zone soit masqué*/
+    gap: 15px;
+    padding: 10px;
+    position: relative;
+    z-index: 0;
+}
+.product-slider-verticale {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto; /* scroll vertical */
+    max-height: 500px; /* <-- environ deux lignes (tu peux ajuster) */
+    padding: 10px;
+    position: relative;
+}
+
+/* Cache la scrollbar si tu veux */
+.product-slider-verticale::-webkit-scrollbar {
+    width: 8px;
+}
+
+.product-slider-verticale::-webkit-scrollbar-thumb {
+    background-color: #b4a49b;
+    border-radius: 10px;
+
+}
+
+.product-slider::-webkit-scrollbar{
+    display: none;
+}
+
+.product-slider-verticale .product-card{
+    max-width: 200px;
+    margin: 12px;
+    
+}
+
+
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+.product-card {
+    max-width: 200px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 200px;
+    position: relative; /* important pour positionner l’icône par rapport à la carte */
+    /*en est pas sur a sa voir*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bx-cart-add {
+    position: absolute; /* positionnement absolu dans la carte */
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #7c7a7a;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card img {
+    width: 100%; 
+    height: 200px;
+    margin-top: 25px; 
+}
+
+.product-card h3 {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.title {
+    white-space: nowrap;            /* Empêche le texte de passer à la ligne suivante */
+    overflow: hidden;               /* Cache le texte qui dépasse */
+    text-overflow: ellipsis;        /* Affiche des points de suspension (...) */
+    width: 150px;                   /* Fixe une largeur, tu peux l'ajuster */
+  }
+  
+.ajouter_au_pannier {
+    display: none; /* Masqué puisque tu veux utiliser uniquement l'icône */
+}
+
+
+/* Pied de page */
+section.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f6f6f6;
+}
+
+section div {
+    flex: 1; 
+    /*
+    VEUT DIRE :
+        flex-grow: 1;  -> L'élément grandit pour occuper l'espace disponible 
+        flex-shrink: 1; -> L'élément peut rétrécir si nécessaire 
+        flex-basis: 0%; -> La taille de base est ignorée, donc l'espace est réparti uniformément 
+    CELA PERMET QUE CHAQUE chaque <div> à l'intérieur du <section> avec display: flex; va:
+        -> Prendre un espace égal aux autres divs dans le même footer.
+        -> S'adapter dynamiquement à la largeur disponible.
+    */
+    margin: 10px;
+}
+
+section ul {
+    list-style: none;
+}
+
+section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+section ul li a:hover {
+    color: #1869d2;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #b4a49b;
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.contact-info {
+    font-size: 16px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #654f4f;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/*
+
+
+.up{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+.up a , .up img , .up span , .up input{
+    margin-left: 20px;
+}
+.up a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+}
+nav h1 {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+nav h1 img{
+    padding-right: 10px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+#Logo{
+    max-width: 20px;
+    max-height: 40px;
+    border-radius : 100%;
+}
+    */
